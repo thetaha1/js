@@ -1,6 +1,4 @@
-/*
-  Challenge 1
-*/
+// Challenge 1
 
 let a = 10;
 let b = "20";
@@ -10,7 +8,7 @@ console.log(++a + +b++ + +c++ - +a++);                     //100
 console.log(++a + -b + +c++ - -a++ + +a);                  //100
 console.log(--c + +b + --a * +b++ - +b * a + --a - +true); //100
 
-// i make it in my notebook.
+// ! i make it in my notebook.
 
 /*
   Challenge 2
@@ -25,4 +23,4 @@ let g = true;
 // Do Not Use Variable Twice
 
 console.log(-d * e); // 2000
-console.log(); // 173
+console.log(-d + + ++g * ++e + ++f); // 173
