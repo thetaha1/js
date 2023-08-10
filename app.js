@@ -10,14 +10,7 @@ console.log(++a + +b++ + +c++ - +a++);                     //100
 console.log(++a + -b + +c++ - -a++ + +a);                  //100
 console.log(--c + +b + --a * +b++ - +b * a + --a - +true); //100
 
-/*
-  [++a] [+]
-  [++a]
-  - Value:
-  - Explain:
-  [+]
-  - Explain:
-*/
+// i make it in my notebook.
 
 /*
   Challenge 2
@@ -31,5 +24,5 @@ let g = true;
 // Only Use Variables Value
 // Do Not Use Variable Twice
 
-console.log(); // 2000
+console.log(-d * e); // 2000
 console.log(); // 173
