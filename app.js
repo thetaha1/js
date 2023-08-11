@@ -1,22 +1,16 @@
-let day = "  friday  ";
-// You Need To Remove Spaces And Make First Letter Capital => Friday
-day = `${day.trim().charAt(0).toUpperCase()}${day.trim().substr(1)}`;
+// Array Challenge
 
-switch (day) {
-  case "Friday":
-  case "Saturday":
-  case "Sunday":
-    console.log("No Appointments Available");
-    break;
-  case "Monday":
-    console.log("From 10:00 AM To 5:00 PM");
-    break;
-  case "Tuesday":
-    console.log("From 10:00 AM To 6:00 PM");
-    break;
-  case "Wednesday":
-    console.log("From 10:00 AM To 7:00 PM");
-    break;
-  default:
-    console.log("Its Not A Valid Day");
-}
+let zero = 0;
+
+let counter = 3;
+
+let my = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
+
+my = my.slice(zero, ++counter).reverse();
+console.log(my); // ["Osama", "Elham", "Mazero", "Ahmed"]
+
+console.log(my.slice(++zero, --counter)); // ["Elham", "Mazero"]
+
+console.log(`${my[zero].slice(0 , 2)}${my[++zero].slice(2)}`); // "Elzero"
+
+console.log(`${my[zero][++counter]}${my[zero][++counter].toUpperCase()}`); // "rO"
