@@ -14,3 +14,4 @@ if (num1 != str) console.log("Done");
 
 ("{str} Is The Same Type As {str2} But Not The Same Value");
 if (typeof str != typeof str && str != str2) console.log("Done");
+ 
