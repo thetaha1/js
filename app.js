@@ -1,16 +1,10 @@
-// Array Challenge
+let myFriends = ["Ahmed", "Elham", "Osama", "Gamal"];
+let num = 3;
 
-let zero = 0;
 
-let counter = 3;
 
-let my = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
+// Method 1
+console.log(myFriends.slice(false,-true)); // ["Ahmed", "Elham", "Osama"];
 
-my = my.slice(zero, ++counter).reverse();
-console.log(my); // ["Osama", "Elham", "Mazero", "Ahmed"]
-
-console.log(my.slice(++zero, --counter)); // ["Elham", "Mazero"]
-
-console.log(`${my[zero].slice(0 , 2)}${my[++zero].slice(2)}`); // "Elzero"
-
-console.log(`${my[zero][++counter]}${my[zero][++counter].toUpperCase()}`); // "rO"
+// Method 2
+console.log(myFriends.splice(false,3)); // ["Ahmed", "Elham", "Osama"];
