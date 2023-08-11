@@ -1,68 +1,52 @@
-// Edit What You Want Here
-
-let num1 = 2;
-let num2 = 1;
-let num3 = 2;
-let num4 = 24;
-
 /*
-  Do Not Edit Below This Line
-  Needed Output
-  True 7 Times
+  Switch Challenge
 */
 
-// Condition 1
+let job = "Manager";
+let salary = 0;
 
-if (num1 > num2) {
-  console.log("True");
-} else {
-  console.log("False");
+switch (job) {
+  case "Manager":
+    salary = 8000;
+    console.log(`My Money is ${salary}`);
+    break;
+  case "IT":
+  case "Support":
+    salary = 6000;
+    console.log(`My Money is ${salary}`);
+    break;
+  case "Developer":
+  case "Designer":
+    salary = 7000;
+    console.log(`My Money is ${salary}`);
+    break;
+  default:
+    salary = 4000;
 }
 
-// Condition 2
+/*
+  If Challenge
+*/
 
-if (num1 > num2 && num1 < num4) {
-  console.log("True");
+let holidays = 0;
+let money = 0;
+
+if (holidays === 0) {
+  money = 5000;
+  console.log(`My Money is ${money}`);
+} else if (holidays === 1 || holidays === 2) {
+  money = 3000;
+  console.log(`My Money is ${money}`);
+} else if (holidays === 3) {
+  money = 2000;
+  console.log(`My Money is ${money}`);
+} else if (holidays === 4) {
+  money = 1000;
+  console.log(`My Money is ${money}`);
+} else if (holidays === 5) {
+  money = 0;
+  console.log(`My Money is ${money}`);
 } else {
-  console.log("False");
-}
-
-// Condition 3
-
-if (num1 > num2 && num1 === num3) {
-  console.log("True");
-} else {
-  console.log("False");
-}
-
-// Condition 4
-
-if (num1 + num2 < num4) {
-  console.log("True");
-} else {
-  console.log("False");
-}
-
-// Condition 5
-
-if (num1 + num3 < num4) {
-  console.log("True");
-} else {
-  console.log("False");
-}
-
-// Condition 6
-
-if (num1 + num2 + num3 < num4) {
-  console.log("True");
-} else {
-  console.log("False");
-}
-
-// Condition 7
-// if (24 - (2 + 2) + 1 === 21)
-if (num4 - (num1 + num3) + num2 === 21) {
-  console.log("True");
-} else {
-  console.log("False");
+  money = 0;
+  console.log(`My Money is ${money}`);
 }
