@@ -1,15 +1,5 @@
-let myFriends = ["Ahmed", "Elham", "Osama", "Gamal"];
-let num = 3;
+let website = "Go";
+let words = [`${website}ogle`, "Facebook", ["Elzero", "Web", "School"]];
 
-// Method 1
-console.log(myFriends.slice(false, -true)); // ["Ahmed", "Elham", "Osama"];
-
-myFriends.pop();
-console.log(myFriends);
-
-// Method 2
-myFriends.length = num;
-console.log(myFriends); // ["Ahmed", "Elham", "Osama"];
-
-// Method 3
-console.log(myFriends.splice(false, 3)); // ["Ahmed", "Elham", "Osama"];
+console.log(words[website.length][+false].slice(website.length).toUpperCase()); // ZERO
+console.log(words[website.length][website.length - website.length].slice(website.length).toUpperCase()); // ZERO
