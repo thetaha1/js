@@ -1,16 +1,7 @@
-let needle = "JS";
-let haystack = ["PHP", "JS", "Python"];
+let arr1 = ["A", "C", "X"];
+let arr2 = ["D", "E", "F", "Y"];
+let allArrs = [];
 
-if (haystack.includes(needle)) {
-    console.log("Found");
-}
+allArrs = arr1.concat(arr2).sort().join("").substring(arr2.length).toLowerCase();
 
-if (haystack.indexOf(needle) != -true) {
-    console.log("Found");
-}
-if (haystack[+true] === needle) {
-    console.log("Found");
-}
-if (haystack.indexOf(needle)) {
-    console.log("Found");
-}
+console.log(allArrs); // fxy
