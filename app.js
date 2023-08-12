@@ -1,7 +1,10 @@
-let arr1 = ["A", "C", "X"];
-let arr2 = ["D", "E", "F", "Y"];
-let allArrs = [];
+let needle = "JS";
+let haystack = ["PHP", "JS", "Python"];
 
-allArrs = arr1.concat(arr2).sort().join('').substring(4).toLowerCase();
+if (haystack.includes(needle)) {
+    console.log("Found");
+}
 
-console.log(allArrs); // fxy
+if (haystack.indexOf(needle) != -true) {
+    console.log("Found");
+}
