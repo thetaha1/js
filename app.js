@@ -1,10 +1,15 @@
-let needle = "JS";
-let haystack = ["PHP", "JS", "Python"];
+let myFriends = ["Ahmed", "Elham", "Osama", "Gamal"];
+let num = 3;
 
-if (haystack.includes(needle)) {
-    console.log("Found");
-}
+// Method 1
+console.log(myFriends.slice(false, -true)); // ["Ahmed", "Elham", "Osama"];
 
-if (haystack.indexOf(needle) != -true) {
-    console.log("Found");
-}
+myFriends.pop();
+console.log(myFriends);
+
+// Method 2
+myFriends.length = num;
+console.log(myFriends); // ["Ahmed", "Elham", "Osama"];
+
+// Method 3
+console.log(myFriends.splice(false, 3)); // ["Ahmed", "Elham", "Osama"];
