@@ -1,6 +1,8 @@
-let index = 10;
-let jump = 2;
+let friends = ["Ahmed", "Sayed", "Eman", "Mahmoud", "Ameer", "Osama", "Sameh"];
+let letter = "a";
 
-for (let i = index; i > jump; i -= 2) {
-  console.log(i);
+for (let i = letter.length - letter.length,j=letter.length; i < friends.length; i++) {
+  if (friends[i] === "Ahmed" || friends[i] === "Ameer") continue;
+  console.log(`${j} => ${friends[i]}`);
+  j++
 }
