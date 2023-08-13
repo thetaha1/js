@@ -1,12 +1,10 @@
-// This code to print numbers in Array 'arr' in new array.
+let start = 10;
+let end = 100;
+let exclude = 40;
 
-let arr = ["PHP", 2, "JS", 2, 43, "Python", 3];
-let newArr = [];
-
-for (i = 0; i < arr.length + 1; i++) {
-  if (typeof arr[i] == "number") {
-    newArr.push(arr[i]);
+for (let i = 10; i <= 100; i += 10) {
+  if (i === 40) {
+    continue;
   }
+  console.log(i);
 }
-console.log(newArr);
-console.log(arr.length);
