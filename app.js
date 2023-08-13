@@ -1,10 +1,6 @@
-let start = 1;
-let end = 6;
-let breaker = 2;
+let index = 10;
+let jump = 2;
 
-for (let i = start; i <= end; i++) {
+for (let i = index; i > jump; i -= 2) {
   console.log(i);
-  for (let j = breaker; j <= end - breaker; j++) {
-    console.log(`-- ${breaker}\n-- ${breaker * breaker}`);
-  }
 }
