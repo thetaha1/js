@@ -1,10 +1,12 @@
 let start = 10;
-let end = 100;
-let exclude = 40;
+let end = 0;
+let stop = 3;
 
-for (let i = start;i <= end; i+=start ){
-  if (i === exclude) {
-    continue;
+for (let i = start; i > end; i--) {
+  if (i < start) {
+    console.log(`${end}${i}`);
+    if (i === stop) break;
+  } else {
+    console.log(i);
   }
-  console.log(i);
 }
