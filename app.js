@@ -1,12 +1,10 @@
-let start = 10;
-let end = 0;
-let stop = 3;
+let start = 1;
+let end = 6;
+let breaker = 2;
 
-for (let i = start; i > end; i--) {
-  if (i < start) {
-    console.log(`${end}${i}`);
-    if (i === stop) break;
-  } else {
-    console.log(i);
+for (let i = start; i <= end; i++) {
+  console.log(i);
+  for (let j = breaker; j <= end - breaker; j++) {
+    console.log(`-- ${breaker}\n-- ${breaker * breaker}`);
   }
 }
