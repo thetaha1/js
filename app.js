@@ -1,7 +1,12 @@
-let arr1 = ["A", "C", "X"];
-let arr2 = ["D", "E", "F", "Y"];
-let allArrs = [];
+// This code to print numbers in Array 'arr' in new array.
 
-allArrs = arr1.concat(arr2).sort().join("").substring(arr2.length).toLowerCase();
+let arr = ["PHP", 2, "JS", 2, 43, "Python", 3];
+let newArr = [];
 
-console.log(allArrs); // fxy
+for (i = 0; i < arr.length + 1; i++) {
+  if (typeof arr[i] == "number") {
+    newArr.push(arr[i]);
+  }
+}
+console.log(newArr);
+console.log(arr.length);
