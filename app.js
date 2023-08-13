@@ -1,12 +1,8 @@
 let start = 0;
-let swappedName = "elZerO";
+let mix = [1, 2, 3, "A", "B", "C", 4];
 
-for (let i = start; i < swappedName.length; ++i) {
-  if (i === 0) swappedName = swappedName.split("");
-  if (swappedName[i].toUpperCase() === swappedName[i]) {
-    swappedName[i] = swappedName[i].toLowerCase();
-  } else {
-    swappedName[i] = swappedName[i].toUpperCase();
+for (let i = start + 1; i < mix.length; ++i) {
+  if (typeof mix[i] === "number") {
+    console.log(mix[i]);
   }
-  if (i === swappedName.length - 1) console.log(swappedName.join(""));
 }
