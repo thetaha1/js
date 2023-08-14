@@ -1,25 +1,16 @@
-function calculate(firstNum, secondNum, operation) {
-  if (typeof firstNum === "undefined") {
-    console.log("NO NUMBERS");
-    return 0;
-  } else if (typeof secondNum === "undefined") {
-    console.log("Second Number Not Found");
-    return 0;
-  }
-
-  if (operation === "add" || "undefined") {
-    console.log(`Addetion : ${firstNum + secondNum}`);
-  } else if (operation === "subtract") {
-    console.log(`Subtract : ${firstNum - secondNum}`);
-  } else if (operation === "multiply") {
-    console.log(`Multiply : ${firstNum * secondNum}`);
+function ageInTime(theAge) {
+  if (theAge < 10 || theAge > 100) {
+    console.log("Age Out Of Range");
+  } else {
+    console.log(`${(theAge *= 12)} Months`);
+    console.log(`${(theAge *= 4)} Week`);
+    console.log(`${(theAge *= 7)} Day`);
+    console.log(`${(theAge *= 24)} Hour`);
+    console.log(`${(theAge *= 60)} Minutes`);
+    console.log(`${(theAge *= 60)} Seconds`);
   }
 }
 
 // Output
-calculate(); // NO NUMBERS
-calculate(20); // Second Number Not Found
-calculate(20, 30); // 50
-calculate(20, 30, "add"); // 50
-calculate(20, 30, "subtract"); // -10
-calculate(20, 30, "multiply"); // 600
+ageInTime(110); // Age Out Of Range
+ageInTime(38); // Months Example => 456 Months
