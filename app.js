@@ -1,16 +1,8 @@
-function ageInTime(theAge) {
-  if (theAge < 10 || theAge > 100) {
-    console.log("Age Out Of Range");
-  } else {
-    console.log(`${(theAge *= 12)} Months`);
-    console.log(`${(theAge *= 4)} Week`);
-    console.log(`${(theAge *= 7)} Day`);
-    console.log(`${(theAge *= 24)} Hour`);
-    console.log(`${(theAge *= 60)} Minutes`);
-    console.log(`${(theAge *= 60)} Seconds`);
+function createSelectBox(startYear, endYear) {
+  document.write(`<select name="cars" id="cars">`);
+  for (let i = startYear; i <= endYear; i++) {
+    document.write(`<option value="num${i}">${i}</option>`);
   }
+  document.write(`</select>`);
 }
-
-// Output
-ageInTime(110); // Age Out Of Range
-ageInTime(38); // Months Example => 456 Months
+createSelectBox(2000, 2021);
