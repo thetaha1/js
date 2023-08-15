@@ -1,22 +1,11 @@
-/*
-  Function Arrow Challenges
-*/
-
-// [1] One Statement In Function
-// [2] Convert To Arrow Function
-// [3] Print The Output [Arguments May Change]
+// Function Arrow Challenges
 
 let names = (...na) => `String [${na.join("], [")}] => Done !`;
+
 console.log(names("Osama", "Mohamed", "Ali", "Ibrahim"));
 
 /* ================================= */
 
-// [1] Replace ??? In Return Statement To Get The Output
-// [2] Create The Same Function With Regular Syntax
-// [3] Use Array Inside The Arguments To Get The Output
+let calc = (one, two, ...nums) => -one - two + nums[0] + nums[1];
 
-// let myNumbers = [20, 50, 10, 60];
-
-// let calc = (one, two, ...nums) => "???";
-
-// console.log(calc(10, "???", "???")); // 80
+console.log(calc(10, 20, 50, 60)); // 80
