@@ -1,12 +1,22 @@
-function multiply(...num) {
-  let result = 1;
-  for (let i = 0; i < num.length; i++) {
-    if (typeof num[i] !== "number") continue;
-    if (num[i] % 1 !== 0) num[i] = Math.floor(num[i]);
-    result *= num[i];
-  }
-  console.log(result);
-}
-multiply(10, 20); // 200
-multiply("A", 10, 30); // 300
-multiply(100.5, 10, "B"); // 1000
+/*
+  Function Arrow Challenges
+*/
+
+// [1] One Statement In Function
+// [2] Convert To Arrow Function
+// [3] Print The Output [Arguments May Change]
+
+let names = (...na) => `String [${na.join("], [")}] => Done !`;
+console.log(names("Osama", "Mohamed", "Ali", "Ibrahim"));
+
+/* ================================= */
+
+// [1] Replace ??? In Return Statement To Get The Output
+// [2] Create The Same Function With Regular Syntax
+// [3] Use Array Inside The Arguments To Get The Output
+
+// let myNumbers = [20, 50, 10, 60];
+
+// let calc = (one, two, ...nums) => "???";
+
+// console.log(calc(10, "???", "???")); // 80
