@@ -1,39 +1,17 @@
-/*
-  Higher Order Functions Challenges
+let mix = [1, 2, 3, "E", 4, "l", "z", "e", "r", 5, "o"];
 
-  You Can Use
-  - ,
-  - _
-  - Space
-  - True => 1 => One Time Only In The Code
-
-  You Cannot Use
-  - Numbers
-  - Letters
-
-  - You Must Use [Filter + Map + Reduce + Your Knowledge]
-  - Order Is Not Important
-  - All In One Chain
-
-*/
- 
-let myString = "1,2,3,EE,l,z,e,r,o,_,W,e,b,_,S,c,h,o,o,l,2,0,Z";
-
-let solution = myString
-  .split(",")
-  .filter(function (el) {
-    return isNaN(el);
-  })
-  .map(function (el) {
-    if (el.length > 1) {
-      el = el[0];
-    }
+let word = mix.map(function (el) {
+  if (isNaN(el)) {
     return el;
-  })
-  .join("")
-  .split("_")
-  .map(function (el) {
-    return el.toLowerCase();
-  });
+  }
+  else {
+    el = ""
+    return el;
+  }
+}).reduce(function (acc,current) {
+  return acc + current;
+})
 
-console.log(solution); // Elzero Web School
+
+console.log(word);
+// Elzero
