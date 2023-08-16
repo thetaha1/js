@@ -1,22 +1,39 @@
-let specialMix = (...data) => {
-  let result = 0;
-  let calcIfMixType = 0;
-  let check = () => {
-    for (let i = 0; i < data.length; i++) {
-      calcIfMixType = () => {
-        if (isNaN(parseInt(data[i])) === false) result += parseInt(data[i]);
-      };
-      calcIfMixType();
-    }
-  };
-  check();
-  if (result === 0) {
-    return "All Is Strings";
-  }
-  return result;
-};
+/*
+  Higher Order Functions Challenges
 
-console.log(specialMix(10, 20, 30)); // 60
-console.log(specialMix("10Test", "Testing", "20Cool")); // 30
-console.log(specialMix("Testing", "10Testing", "40Cool")); // 50
-console.log(specialMix("Test", "Cool", "Test")); // All Is Strings
+  You Can Use
+  - ,
+  - _
+  - Space
+  - True => 1 => One Time Only In The Code
+
+  You Cannot Use
+  - Numbers
+  - Letters
+
+  - You Must Use [Filter + Map + Reduce + Your Knowledge]
+  - Order Is Not Important
+  - All In One Chain
+
+*/
+
+let myString = "1,2,3,EE,l,z,e,r,o,_,W,e,b,_,S,c,h,o,o,l,2,0,Z";
+
+let solution = myString
+  .split(",")
+  .filter(function (el) {
+    return isNaN(el);
+  })
+  .map(function (el) {
+    if (el.length > 1) {
+      el = el[0];
+    }
+    return el;
+  })
+  .join("")
+  .split("_")
+  .map(function (el) {
+    return el.toLowerCase();
+  });
+
+console.log(solution); // Elzero Web School
