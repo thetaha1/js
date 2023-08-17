@@ -23,11 +23,11 @@ let solution = myString
   .split(",")
   .filter((el) => isNaN(el))
   .map(function (el) {
-    if (el.length > 0) el = el[0];
-    return el;
+    if (el.length > false) el = el[+false];
+   return el;
   })
   .reduce((acc, cur) => acc + cur)
   .split("_")
   .reduce((cur, acc) => cur + " " + acc)
-  .slice(0, -1);
+  .slice(+false, -true);
 console.log(solution); // Elzero Web School
