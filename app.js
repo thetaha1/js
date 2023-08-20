@@ -1,13 +1,7 @@
-let myString = "1,2,3,EE,l,z,e,r,o,_,W,e,b,_,S,c,h,o,o,l,2,0,Z";
+let mix = [1, 2, 3, "E", 4, "l", "z", "e", "r", 5, "o"];
 
-let solution = myString
-  .split(",")
-  .filter((el) => isNaN(el) && el !== "Z")
-  .map((el) => el[0])
-  .reduce((acc, cur) => acc + cur, "")
-  .toLowerCase()
-  .split("_")
-  .map(el => el[0].toUpperCase() + el.slice(1))
-  .reduce((acc, cur) => acc + " " + cur);
+let letterWithoutNumbers = mix
+  .map((el) => (isNaN(el) ? el : ""))
+  .reduce((acc, cur) => acc + cur);
 
-console.log(solution); // Elzero Web School
+console.log(letterWithoutNumbers); // Elzero
