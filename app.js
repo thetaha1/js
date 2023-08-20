@@ -1,7 +1,6 @@
-let numsAndStrings = [1, 10, -10, -20, 5, "A", 3, "B", "C"];
+let nums = [2, 12, 11, 5, 10, 1, 99];
 
-let absNums = numsAndStrings.filter((el) => !isNaN(el)).map((el) => -el);
+let result = nums.reduce(
+  (acc, cur) => (cur % 2 === 1 ? acc + cur : acc * cur), 1);
 
-console.log(absNums)
-
-// [-1, -10, 10, 20, -5, -3]
+console.log(result); // 500
