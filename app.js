@@ -1,8 +1,13 @@
-let myString = "EElllzzzzzzzeroo";
+let myArray = ["E", "l", "z", ["e", "r"], "o"];
 
-let uniqueLetters = myString
-  .split('')
-  .filter((char, index, arr) => arr.indexOf(char) === index)
-  .reduce((cur, arr) => cur + arr);
+let concatenatedString = myArray
+  .reduce((acc, current) => {
+    if (Array.isArray(current)) {
+      return acc.concat(current);
+    } else {
+      return acc.concat(current);
+    }
+  }, [])
+  .reduce((acc, cur) => acc + cur);
 
-console.log(uniqueLetters); // Output: Elzero
+console.log(concatenatedString); // Output: Elzero
