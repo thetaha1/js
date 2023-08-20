@@ -1,7 +1,8 @@
-let mix = [1, 2, 3, "E", 4, "l", "z", "e", "r", 5, "o"];
+let myString = "EElllzzzzzzzeroo";
 
-let letterWithoutNumbers = mix
-  .map((el) => (isNaN(el) ? el : ""))
-  .reduce((acc, cur) => acc + cur);
+let uniqueLetters = myString
+  .split('')
+  .filter((char, index, arr) => arr.indexOf(char) === index)
+  .reduce((cur, arr) => cur + arr);
 
-console.log(letterWithoutNumbers); // Elzero
+console.log(uniqueLetters); // Output: Elzero
