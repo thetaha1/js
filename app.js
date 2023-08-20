@@ -1,6 +1,15 @@
-let nums = [2, 12, 11, 5, 10, 1, 99];
+let member = {
+  name: "Elzero",
+  age: 38,
+  country: "Egypt",
+  fullDetails() {
+    return `My Name Is ${this.name}, My Age Is ${this.age}, I Live In ${this.country}`;
+  },
+};
 
-let result = nums.reduce(
-  (acc, cur) => (cur % 2 === 1 ? acc + cur : acc * cur), 1);
+console.log(member.name);
+console.log(member.age);
+console.log(member.country);
+console.log(member.fullDetails());
 
-console.log(result); // 500
+// My Name Is Elzero, My Age Is 38, I Live in Egypt
