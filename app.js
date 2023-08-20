@@ -1,13 +1,7 @@
-let myArray = ["E", "l", "z", ["e", "r"], "o"];
+let numsAndStrings = [1, 10, -10, -20, 5, "A", 3, "B", "C"];
 
-let concatenatedString = myArray
-  .reduce((acc, current) => {
-    if (Array.isArray(current)) {
-      return acc.concat(current);
-    } else {
-      return acc.concat(current);
-    }
-  }, [])
-  .reduce((acc, cur) => acc + cur);
+let absNums = numsAndStrings.filter((el) => !isNaN(el)).map((el) => -el);
 
-console.log(concatenatedString); // Output: Elzero
+console.log(absNums)
+
+// [-1, -10, 10, 20, -5, -3]
