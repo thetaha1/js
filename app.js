@@ -1,33 +1,40 @@
-/*
-  Function - Random Argument Challenge
-  ====================================
-  Create Function showDetails
-  Function Accept 3 Parameters [a, b, c]
-  Data Types For Info Is
-  - String => Name
-  - Number => Age
-  - Boolean => Status
-  Argument Is Random
-  Data Is Not Sorted Output Depend On Data Types
-  - Use Ternary Conditional Operator
-*/
+let myFavGames = {
+  "Trinity Universe": {
+    publisher: "NIS America",
+    price: 40,
+  },
+  "Titan Quest": {
+    publisher: "THQ",
+    bestThree: {
+      one: "Immortal Throne",
+      two: "Ragnarök",
+      three: "Atlantis",
+    },
+    price: 50,
+  },
+  YS: {
+    publisher: "Falcom",
+    bestThree: {
+      one: "Oath in Felghana",
+      two: "Ark Of Napishtim",
+      three: "origin",
+    },
+    price: 40,
+  },
+};
 
-function showDetails(a, b, c) {
-  let cont = [a, b, c];
-  return `Hello ${
-    cont.find((el) => typeof el === "string")
-  }, Your Age Is ${
-    cont.find((el) => typeof el === "number")
-  }, You Are ${
-    cont.find((el) => typeof el === "string")
-  } For Hire`;
+let objectLength = Object.keys(myFavGames).length;
+
+for (let i = 0; i < objectLength; i++) {
+  console.log(`The Game Name Is ${Object.keys(myFavGames)[i]}`);
+  console.log(`The Publisher Is ${Object.values(myFavGames)[i].publisher}`);
+  console.log(`The Price Is ${Object.values(myFavGames)[i].price}`);
+
+  if (Object.values(myFavGames)[i].bestThree) {
+    console.log("- Game Has Releases");
+    console.log(`First => ${Object.values(myFavGames)[i].bestThree.one}`);
+    console.log(`Second => ${Object.values(myFavGames)[i].bestThree.two}`);
+    console.log(`Third => ${Object.values(myFavGames)[i].bestThree.three}`);
+  }
+  console.log("#".repeat(20));
 }
-
-showDetails("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-showDetails(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-showDetails(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
-showDetails(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
-
-// let change = [false, "Osama", 38].find((el) => typeof el === "string");
-
-// console.log(change);
