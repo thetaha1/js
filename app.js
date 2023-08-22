@@ -1,40 +1,16 @@
-let myFavGames = {
-  "Trinity Universe": {
-    publisher: "NIS America",
-    price: 40,
-  },
-  "Titan Quest": {
-    publisher: "THQ",
-    bestThree: {
-      one: "Immortal Throne",
-      two: "Ragnarök",
-      three: "Atlantis",
-    },
-    price: 50,
-  },
-  YS: {
-    publisher: "Falcom",
-    bestThree: {
-      one: "Oath in Felghana",
-      two: "Ark Of Napishtim",
-      three: "origin",
-    },
-    price: 40,
-  },
-};
+/* <div id="elzero" class="element" name="js">JavaScript</div> */
 
-let objectLength = Object.keys(myFavGames).length;
+let elementByTagName = document.getElementsByTagName("div");
+let elementByClassName = document.getElementsByClassName("element");
+let elementById = document.getElementById("elzero");
+let elementByName = document.getElementsByName("js");
+let elByQuselTagName = document.querySelector("div");
+let elByQuselId = document.querySelector("#elzero");
+let elByQuselClassName = document.querySelector(".element");
+let elByQuselName = document.querySelector("[name= 'js']");
+let elByQuselAllTagName = document.querySelectorAll("div");
+let elByQuselAllId = document.querySelectorAll("#elzero");
+let elByQuselAllClassName = document.querySelectorAll(".element");
+let elByQuselAllName = document.querySelectorAll("[name= 'js']");
 
-for (let i = 0; i < objectLength; i++) {
-  console.log(`The Game Name Is ${Object.keys(myFavGames)[i]}`);
-  console.log(`The Publisher Is ${Object.values(myFavGames)[i].publisher}`);
-  console.log(`The Price Is ${Object.values(myFavGames)[i].price}`);
-
-  if (Object.values(myFavGames)[i].bestThree) {
-    console.log("- Game Has Releases");
-    console.log(`First => ${Object.values(myFavGames)[i].bestThree.one}`);
-    console.log(`Second => ${Object.values(myFavGames)[i].bestThree.two}`);
-    console.log(`Third => ${Object.values(myFavGames)[i].bestThree.three}`);
-  }
-  console.log("#".repeat(20));
-}
+console.log(el);
