@@ -1,14 +1,7 @@
-let elLength = document.getElementsByTagName("img");
+let poundToDollar = (pound) => pound * 15.6;
 
-// console.log(elLength.length)
+// console.log(poundToDollar(1));
 
-for (let i = 0; i < elLength.length; i++) {
-  let curEl = elLength[i];
-  curEl.setAttribute(
-    "src",
-    "https://elzero.org/wp-content/themes/elzero/imgs/logo.png"
-  );
-  curEl.setAttribute("alt", "Elzero Logo");
-}
+let pound = document.querySelector("[name:'dollar']");
 
-console.log(document.body);
+console.log(pound.value);
