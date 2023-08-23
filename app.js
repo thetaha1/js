@@ -1,7 +1,30 @@
-let poundToDollar = (pound) => pound * 15.6;
+/*
+  DOM [Events]
+  - Validate Form Practice
+  - Prevent Default
+*/
 
-// console.log(poundToDollar(1));
+let userInput = document.querySelector("[name='username']");
+let ageInput = document.querySelector("[name='age']");
 
-let pound = document.querySelector("[name:'dollar']");
+document.forms[0].onsubmit = function (e) {
+  let userValid = false;
+  let ageValid = false;
 
-console.log(pound.value);
+  if (userInput.value !== "" && userInput.value.length <= 10) {
+    userValid = true;
+  }
+
+  if (ageInput.value !== "") {
+    ageValid = true;
+  }
+
+  if (userValid === false || ageValid === false) {
+    e.preventDefault();
+  }
+};
+
+document.links[0].onclick = function (event) {
+  console.log(event);
+  event.preventDefault();
+};
